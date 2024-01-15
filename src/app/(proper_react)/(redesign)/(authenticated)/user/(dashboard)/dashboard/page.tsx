@@ -70,7 +70,7 @@ export default async function DashboardPage() {
           countryCode: countryCode,
         })))
   ) {
-    return redirect("/redesign/user/welcome/");
+    return redirect("/user/welcome/");
   }
 
   await refreshStoredScanResults(profileId);
