@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 
-export function useHasRendedClientSide() {
+export function useHasRenderedClientSide() {
   const [hasRenderedClientSide, setHasRenderedClientSide] = useState(false);
 
   useEffect(() => {

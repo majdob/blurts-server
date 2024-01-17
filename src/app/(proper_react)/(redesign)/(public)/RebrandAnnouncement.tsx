@@ -8,7 +8,7 @@ import styles from "./RebrandAnnouncement.module.scss";
 import { CloseBtn } from "../../../components/server/Icons";
 import { useL10n } from "../../../hooks/l10n";
 import { useLocalDismissal } from "../../../hooks/useLocalDismissal";
-import { useHasRendedClientSide } from "../../../hooks/useHasRenderedClientSide";
+import { useHasRenderedClientSide } from "../../../hooks/useHasRenderedClientSide";
 
 export const RebrandAnnouncement = () => {
   const l10n = useL10n();
@@ -16,7 +16,7 @@ export const RebrandAnnouncement = () => {
     duration: Number.MAX_SAFE_INTEGER,
   });
   // Prevent a flash of a pre-rendered banner if the user has already dismissed it:
-  const hasRenderedClientSide = useHasRendedClientSide();
+  const hasRenderedClientSide = useHasRenderedClientSide();
 
   if (!hasRenderedClientSide || dismissal.isDismissed) {
     return null;
